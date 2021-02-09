@@ -6,7 +6,7 @@ Layers providing Vulkan features when native support is unavailable
 
 | Platform | Build Status |
 |:--------:|:------------:|
-| Linux/MacOS | [![Build Status](https://travis-ci.org/KhronosGroup/Vulkan-ExtensionLayer.svg?branch=master)](https://travis-ci.org/KhronosGroup/Vulkan-ExtensionLayer) |
+| Linux/MacOS | No Build Status |
 
 ## Introduction
 
@@ -17,6 +17,7 @@ There are some extensions and features in Vulkan that are not available everywhe
 | Layer                               | Extension provided        | Version | File                        | Status   |
 |:-----------------------------------:|:-------------------------:|:-------:|:---------------------------:|:--------:|
 | VK_LAYER_KHRONOS_timeline_semaphore | VK_KHR_timeline_semaphore | 1       | layers/timeline_semaphore.c | complete |
+| VK_LAYER_DEVSH_coroutine_shader     | VK_DEVSH_coroutine_shader | 0       | layers/coroutine_shader.c   | draft    |
 
 ## Information for Developing or Contributing:
 
