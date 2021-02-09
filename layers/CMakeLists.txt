@@ -32,7 +32,8 @@ else()
 endif()
 
 set(TARGET_NAMES
-    VkLayer_khronos_timeline_semaphore)
+    VkLayer_khronos_timeline_semaphore
+    VkLayer_devsh_coroutine_shader)
 
 # Install the layer json files
 if(WIN32)
@@ -109,12 +110,21 @@ if(CMAKE_C_COMPILER_ID MATCHES "Clang")
     set_source_files_properties(parameter_validation.cpp PROPERTIES COMPILE_FLAGS "-Wno-unused-const-variable")
 endif()
 
+# timeline layer
 set(TIMELINE_SEMAPHORE_FILES
     hash_table.cpp
     timeline_semaphore.c)
 
 AddVkLayer(khronos_timeline_semaphore ""
     ${TIMELINE_SEMAPHORE_FILES})
+
+# coroutine shader layer
+set(COROUTINE_SHADER_FILES
+    hash_table.cpp
+    coroutine_shader.c)
+    
+AddVkLayer(devsh_coroutine_shader ""
+    ${COROUTINE_SHADER_FILES})
 
 # The output file needs Unix "/" separators or Windows "\" separators On top of that, Windows separators actually need to be doubled
 # because the json format uses backslash escapes
