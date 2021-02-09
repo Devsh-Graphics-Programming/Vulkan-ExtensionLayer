@@ -1,0 +1,17 @@
+{
+    "file_format_version" : "1.0.0",
+    "layer" : {
+        "name": "VK_LAYER_DEVSH_coroutine_shader",
+        "type": "GLOBAL",
+        "library_path": "@RELATIVE_LAYER_BINARY@",
+        "api_version": "@VK_VERSION@",
+        "implementation_version": "1",
+        "description": "DevSH Graphics Programming coroutine shader layer",
+        "device_extensions": [
+            {
+                "name" : "VK_DEVSH_coroutine_shader",
+                "spec_version" : 1
+            }
+        ]
+    }
+}
